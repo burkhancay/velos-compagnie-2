@@ -1356,3 +1356,58 @@ html[dir='rtl'] .itemside .info {
   padding-right: 15px;
   padding-left: initial; }
 /*# sourceMappingURL=ui.css.map */
+
+/* modif */
+a {
+  color: #333 !important;
+}
+
+.img-wrap img {
+  max-width: 60%;
+  padding-top: 30px;
+}
+
+.img-wrap img .fixed-top {
+  border-bottom: 1px solid #212529;
+}
+
+.bg-primary {
+  background-color: rgb(201, 200, 200) !important;
+}
+
+.badge-danger {
+  padding: 10px 20px;
+  font-size: 15px;
+}
+
+.nav-link .fa-bell,
+.nav-link .fa-shopping-cart {
+  font-size: 22px;
+}
+
+.nav-link span a {
+  color: rgb(34, 159, 197) !important;
+}
+
+.btn-warning,
+.btn-warning:not(:disabled):not(.disabled).active,
+.btn-warning:not(:disabled):not(.disabled):active,
+.show > .btn-warning.dropdown-toggle {
+  background-color: white;
+  border-color: #999;
+}
+
+.fa-heart {
+  color: #e52d27;
+}
+
+.page-link {
+  cursor: pointer;
+}
+
+.btn-outline-primary.disabled,
+.btn-outline-primary:disabled {
+  color: #000;
+  border: 1px solid #000;
+  background-color: transparent;
+}

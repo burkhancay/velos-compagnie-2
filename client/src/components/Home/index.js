@@ -6,14 +6,14 @@ const Deals = () => (
  <div className="card card-deal">
      <div className="col-heading content-body">
       <header className="section-heading">
-       <h3 className="section-title">Deals and offers</h3>
-       <p>These product are on SALE!</p>
+       <h3 className="section-title">Promotions et offres</h3>
+       <p>Ces produits sont en réduction !</p>
      </header>
      <div className="timer">
-       <div> <span className="num">04</span> <small>Days</small></div>
-       <div> <span className="num">12</span> <small>Hours</small></div>
-       <div> <span className="num">58</span> <small>Min</small></div>
-       <div> <span className="num">02</span> <small>Sec</small></div>
+       <div> <span className="num">04</span> <small>Jours</small></div>
+       <div> <span className="num">12</span> <small>Heures</small></div>
+       <div> <span className="num">58</span> <small>Minutes</small></div>
+       <div> <span className="num">02</span> <small>Secondes</small></div>
      </div>
    </div> 
    <div className="row no-gutters items-wrap">
@@ -23,7 +23,7 @@ const Deals = () => (
        <img src={process.env.PUBLIC_URL + 'images/items/3.jpg'} /> 
       </a>
       <div className="text-wrap p-3">
-       	<h2><a href="#" className="title">Bikes</a></h2>
+       	<h2><a href="#" className="title">Vélos</a></h2>
        	<span className="badge badge-danger"> -20% </span>
       </div>
    </figure>
@@ -34,7 +34,7 @@ const Deals = () => (
      <img src={process.env.PUBLIC_URL + 'images/items/4.jpg'} /> 
    </a>
    <div className="text-wrap p-3">
-     <h2><a href="#" className="title">Electric bikes</a></h2>
+     <h2><a href="#" className="title">Vélos électriques</a></h2>
      <span className="badge badge-danger"> -5% </span>
    </div>
  </figure>
@@ -45,7 +45,7 @@ const Deals = () => (
    <img src={process.env.PUBLIC_URL + 'images/items/14.jpg'} /> 
  </a>
  <div className="text-wrap p-3">
-   <h2><a href="#" className="title">Scooters</a></h2>
+   <h2><a href="#" className="title">Trotinettes</a></h2>
    <span className="badge badge-danger"> -20% </span>
  </div>
 </figure>
@@ -75,11 +75,11 @@ const Slider = () => (
   </div>
   <a className="carousel-control-prev" href="#carousel1_indicator" role="button" data-slide="prev">
     <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span className="sr-only">Previous</span>
+    <span className="sr-only">Précédent</span>
   </a>
   <a className="carousel-control-next" href="#carousel1_indicator" role="button" data-slide="next">
     <span className="carousel-control-next-icon" aria-hidden="true"></span>
-    <span className="sr-only">Next</span>
+    <span className="sr-only">Suivant</span>
   </a>
   </div>)
 

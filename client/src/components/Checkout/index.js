@@ -11,7 +11,7 @@ const defaultValues = {
 	address: ''
 }
 
-const options = ['Canada', 'Russia', 'United States', 'India', 'Afghanistan']
+const options = ['France', 'Belgique', 'Suisse', 'Luxembourg'];
 const Checkout = () => { 	
 	const { user } = useSelector(state => state.user);
 	const dispatch = useDispatch();
@@ -35,30 +35,30 @@ const Checkout = () => {
 
 			<div className="card mb-4">
 				<div className="card-body">
-				<h4 className="card-title mb-3">Delivery info</h4>
+				<h4 className="card-title mb-3">Informations de livraison</h4>
 
 				<div className="form-row">
 					<div className="form-group col-sm-6">
-						<DeliveryBox title="standard" value={delivery} message="Free by airline within 20 days" onChange={(e) => handleOnChangeDelivery(e, "standard")}/>
+						<DeliveryBox title="standard" value={delivery} message="Gratuite - 1 à 2 semaines" onChange={(e) => handleOnChangeDelivery(e, "standard")}/>
 					</div>
 					<div className="form-group col-sm-6">
-						<DeliveryBox title="fast" value={delivery} message="Extra 20$ will be charged" onChange={(e) => handleOnChangeDelivery(e, "fast")}/>
+						<DeliveryBox title="fast" value={delivery} message="Rapide - 20€ supplémentaires" onChange={(e) => handleOnChangeDelivery(e, "fast")}/>
 					</div>
 				</div>
 
 				<div className="form-row">
-					<Input.Text label="First name" name="first" value={first} onChange={handleOnChange} />
-					<Input.Text label="Last name" name="last" value={last}  onChange={handleOnChange} />
+					<Input.Text label="Prénom" name="first" value={first} onChange={handleOnChange} />
+					<Input.Text label="Nom" name="last" value={last}  onChange={handleOnChange} />
 				</div> 
 
 				<div className="form-row">
 					<Input.Email label="Email" value={email} onChange={handleOnChange} col="6" />	
 				</div> 
 				<div className="form-row">
-					<Input.Select name='country' options={options}  label="Country" col="6" value={country} onChange={handleOnChange}/>
-					<Input.Text label="City" name='city' value={city} onChange={handleOnChange} />
+					<Input.Select name='country' options={options}  label="Pays" col="6" value={country} onChange={handleOnChange}/>
+					<Input.Text label="Ville" name='city' value={city} onChange={handleOnChange} />
 				</div> 
-					<Input.TextArea label="Address" name="address" onChange={handleOnChange}/> 
+					<Input.TextArea label="Adresse" name="address" onChange={handleOnChange}/> 
 				</div> 
 				<div className="form-row" style={{padding: '0 25px 30px'}}>
 					<Payment isValid={!isValid} />	

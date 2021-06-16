@@ -26,7 +26,7 @@ export const Select = ({ value, label, options, col, name, onChange, style}) => 
         <div className={`form-group col-md-${col}`} style={ style}>
             <label>{label}</label>
             <select id={label} className="form-control" name={name} onChange={() => null} onBlur={onChange} defaultValue={value}>
-                <option>Select...</option>
+                <option>Choisir...</option>
                 {options.map((option, index) => <option key={index}>{ option}</option>)}   
             </select>
         </div>
@@ -34,7 +34,7 @@ export const Select = ({ value, label, options, col, name, onChange, style}) => 
 }
 export const Email = props =>
 <Text type="email" {...props} name="email">
-   <small className="form-text text-muted">We'll never share your email with anyone else.</small>
+   <small className="form-text text-muted">Nous ne partagerons jamais vos informations personnelles.</small>
 </Text>
 export const Password = props => <div className={`form-group col-md-${props.col}`}><Text name='password' type="password" {...props} onBlur={props.onChange}/></div>
 export const ConfirmPassword = props => <div className={`form-group col-md-${props.col}`}><Text name='confirm_password' type="password" {...props} onBlur={props.onChange}/></div>

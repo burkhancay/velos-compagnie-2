@@ -13,6 +13,7 @@ import Success from './Checkout/Success'
 import Cancel from './Checkout/Cancel'
 import Cart from './Cart'
 import Layout from './Layout'
+import ProductScreen from './Misc/Deals';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -26,6 +27,7 @@ const App = () => {
         <Route path="/about" component={About} />
         <Route path="/help" component={Help} />
         <Route path="/deals" component={Deals} />
+        <Route path="/products/:id" component={ProductScreen} />
       
         <Route path="/register" component={Register} />
         <Route path="/login" component={Login} />

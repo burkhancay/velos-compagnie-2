@@ -16,11 +16,11 @@ const UserLogin = ({ user  }) => {
 			<li><span className="nav-link">
 				{!!user ?
 					<>
-						<button className="btn btn-danger btn-sm" onClick={logout}>logout</button>{" "}
-						<span><b>Hi, {user?.first}</b></span>
+						<button className="btn btn-danger btn-sm" onClick={logout}>Déconnexion</button>{" "}
+						<span><b>Bonjour, {user?.first}</b></span>
 					</> :
 					<span>
-						<Link to={'/login'}>login</Link> or <Link to={'/register'}>register</Link>
+						<Link to={'/login'}>Connexion</Link> ou <Link to={'/register'}>Inscription</Link>
 					</span>
 				}
 				</span>
@@ -41,20 +41,15 @@ const Header = () => {
 			<div className="collapse navbar-collapse" id="navbarTop4">
 					<ul className="navbar-nav mr-auto">
 					<UserLogin user={user} />
-					<li><a href="#" className="nav-link" disabled={true}> Deals </a></li>
-					<li><Link className="nav-link" to={'/help'}>Help</Link></li>
+					<li><a href="#" className="nav-link" disabled={true}> Promos </a></li>
+					<li><Link className="nav-link" to={'/help'}>Aide</Link></li>
 				</ul>
 				<ul className="navbar-nav">
-					<li><a href="#" className="nav-link"> <img src="images/icons/flags/US.png" height="16" /> Ship to </a></li>
+					<li><a href="#" className="nav-link"> Livraison <img src="images/icons/flags/fr.png" height="16" /> </a></li>
 					<li className="nav-item dropdown">
-						<a href="#" className="nav-link dropdown-toggle" data-toggle="dropdown"> Watchlist </a>
-						<ul className="dropdown-menu small">
-							<li><a className="dropdown-item" href="#">First item</a></li>
-							<li><a className="dropdown-item" href="#">Second item</a></li>
-							<li><a className="dropdown-item" href="#">Third item </a></li>
-						</ul>
+						<a href="#" className="nav-link" data-toggle="dropdown">Ma liste d'envies</a>
 					</li>
-					<li><a href="#" className="nav-link" disabled={true}> My Orders </a></li>
+					<li><a href="#" className="nav-link" disabled={true}>Mes commandes</a></li>
 					<li><a href="#" className="nav-link"> <i className="fas fa-bell"></i></a></li>
 					<li><Link to={'/cart'} className="nav-link"><i className="fas fa-shopping-cart"></i></Link></li><li> {' '}<span className="badge badge-primary">{quantity}</span></li>
 				</ul> 

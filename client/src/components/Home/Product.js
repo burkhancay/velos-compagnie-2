@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../lib/state/actions";
+import { Link } from "react-router-dom";
 
 const Product = ({ id, name, price, category, brand }) => {
     const dispatch = useDispatch();
@@ -8,7 +9,8 @@ const Product = ({ id, name, price, category, brand }) => {
     return (
     <div className="col-sm-4 col-6">
         <div className="card card-product-grid">
-            <a href="#" className="img-wrap"> <img src={ `images/items/${id}.jpg`} /> </a>
+            <Link to={'/products/' + id } className="img-wrap"> <img src={ `images/items/${id}.jpg`} /> </Link>
+            {/* <a href="#" className="img-wrap"> <img src={ `images/items/${id}.jpg`} /> </a> */}
             <figcaption className="info-wrap">
                 <ul className="rating-stars mb-1">
                     <li style={{width: '80%'}} className="stars-active">
@@ -23,7 +25,7 @@ const Product = ({ id, name, price, category, brand }) => {
                     <a href="#" className="font-weight-bold text-dark">{ brand }</a><br/>
                     <a href="#" className="title">{ name }</a>
                 </div>
-                <div className="price h5 mt-2">${ price }</div>
+                <div className="price h5 mt-2">{ price }€</div>
                     <div className="btn-group btn-group-toggle float-right" data-toggle="buttons">
                         <label className="btn btn-warning active">
                             <input type="radio" name="options" id="option1" checked /><i className="fas fa-heart"></i>

@@ -3,7 +3,7 @@ const Footer = () => {
   return (
     <nav className="navbar fixed-bottom navbar-dark bg-primary d-flex justify-content-end">
       <a className="navbar-brand" href="#">
-        <small>© Copyright - All Rights Reserved - {new Date().getFullYear()}</small>
+        <small>Vélos compagnie © Copyright - Tous droits réservés - {new Date().getFullYear()}</small>
       </a>
     </nav>)
 }  

@@ -8,7 +8,7 @@ const Cart = () => {
 	return (
 	<>
 	<Layout>
-				{false && (<p className="d-flex justify-content-center align-items-center" style={{fontSize: 20}}>Your Cart is Empty</p>) } 
+				{false && (<p className="d-flex justify-content-center align-items-center" style={{fontSize: 20}}>Votre panier est vide</p>) } 
 				{items.map((item) => (<Row key={item.id} {...item} />))}
 	</Layout>
 	</>

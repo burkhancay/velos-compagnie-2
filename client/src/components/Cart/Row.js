@@ -34,7 +34,7 @@ const Row = ({ id, name, price, quantity}) => {
             </td>
             <td className="text-right"> 
                 <a data-original-title="Save to Wishlist" title="" href="" className="btn btn-light" data-toggle="tooltip" onClick={() => null}> <i className="fa fa-heart"></i></a> 
-                <a href="" className="btn btn-light btn-round" onClick={removeFromCartAction}> Remove</a>
+                <a href="" className="btn btn-light btn-round" onClick={removeFromCartAction}> Supprimer</a>
             </td>
     </tr>)
 }

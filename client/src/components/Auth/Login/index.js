@@ -8,8 +8,8 @@ import useAuthentication from "../../../lib/hooks/useAuthentication";
 const Alert = ({ isVisible }) => (
 	isVisible &&
 	<div className="alert alert-info mt-3">
-		<p className="icontext"><i className="icon text-primary fa fa-thumbs-up"></i>User successfully connected</p>
-    </div>
+		<p className="icontext"><i className="icon text-primary fa fa-thumbs-up"></i>L'utilisateur est connecté avec succès !</p>
+  </div>
 )
 const ErrorMessage = ({ error }) => (
 	error && 
@@ -19,7 +19,7 @@ const ErrorMessage = ({ error }) => (
 )
 
 const defaultValues = {
-	email: 'sandy@gmail.com',
+	email: 'exemple@mail.com',
 	password: '',
 }
 const Login = ({ history }) => {
@@ -44,7 +44,7 @@ const Login = ({ history }) => {
   return(<>
 		<div className="card mx-auto" style={{maxWidth: '380px', marginTop:'200px'}}>
       <div className="card-body">
-        <h4 className="card-title mb-4">Sign in</h4>
+        <h4 className="card-title mb-4">Se connecter</h4>
         {/* feedback et message d'erreurs */}
         <ErrorMessage error={error} />
 			  <Alert isVisible={!!user} />
@@ -57,18 +57,18 @@ const Login = ({ history }) => {
             <Input.Email label="Email" style={{padding: 0}} onChange={handleOnChange} value={email} />
           </div>
           <div className="form-group">
-				    <Input.Password label="Password" name="password" style={{padding: 0}}  onChange={handleOnChange} value={password} />
+				    <Input.Password label="Mot de passe" name="password" style={{padding: 0}}  onChange={handleOnChange} value={password} />
           </div>
           <div className="form-group"> 
-					  <Input.Checkbox col="6">Remember</Input.Checkbox>
+					  <Input.Checkbox col="6">Se souvenir</Input.Checkbox>
 				  </div>   
           <div className="form-group">
-					  <Input.Submit classNames="btn-primary btn-block" title="Login" disabled={!isValid} /> 
+					  <Input.Submit classNames="btn-primary btn-block" title="Se connecter" disabled={!isValid} /> 
 			    </div>  
       </form>
       </div>
     </div> 
-     <p className="text-center mt-4">Don't have account? <Link to='/register'>Sign Up</Link></p>
+     <p className="text-center mt-4">Pas de compte ? <Link to='/register'>Créer un compte</Link></p>
 		<br /><br />
 	</>)
 }  
